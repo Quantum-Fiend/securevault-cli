@@ -263,6 +263,6 @@ This software is provided "as is" without warranty. Always maintain backups of y
 
 **[⬆ Back to Top](#-quantum-fiend-securevault)**
 
-Made with 🔐 by [Your Name](https://github.com/yourusername)
+Made with 🔐 by [Quantum-Fiend]([https://github.com/Quantum-Fiend](https://github.com/Quantum-Fiend))
 
 </div>
