@@ -4,10 +4,10 @@
 
 **A Fully Offline, Encrypted Command-Line Password Manager**
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blue?style=for-the-badge)](https://github.com/yourusername/securevault-cli)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blue?style=for-the-badge)](https://github.com/Quantum-Fiend/securevault-cli)
 [![Dart](https://img.shields.io/badge/Dart-3.0%2B-0175C2?style=for-the-badge&logo=dart)](https://dart.dev)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Encryption](https://img.shields.io/badge/Encryption-AES--256--GCM-red?style=for-the-badge)](https://github.com/yourusername/securevault-cli)
+[![Encryption](https://img.shields.io/badge/Encryption-AES--256--GCM-red?style=for-the-badge)](https://github.com/Quantum-Fiend/securevault-cli)
 
 *Your passwords, encrypted and offline. Always.*
 
@@ -77,7 +77,7 @@ SecureVault is a **desktop-based, terminal password manager** written in pure Da
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/securevault-cli.git
+git clone https://github.com/Quantum-Fiend/securevault-cli.git
 cd securevault-cli
 
 # Install dependencies
@@ -503,9 +503,9 @@ SecureVault is provided "as is" without warranty of any kind. While we implement
 
 ## 📞 Support
 
-- 📧 **Email**: your-email@example.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/securevault-cli/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/securevault-cli/discussions)
+- 📧 **Email**: tusharbisht706@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Quantum-Fiend/securevault-cli/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Quantum-Fiend/securevault-cli/discussions)
 
 ---
 
@@ -513,7 +513,7 @@ SecureVault is provided "as is" without warranty of any kind. While we implement
 
 **⭐ Star this repo if you find it useful! ⭐**
 
-Made with ❤️ and 🔐 by [Your Name](https://github.com/yourusername)
+Made with ❤️ and 🔐 by [Quantum-Fiend](https://github.com/Quantum-Fiend)
 
 **Remember**: Your master password is the key to everything. Choose wisely, store securely, never share.
 
