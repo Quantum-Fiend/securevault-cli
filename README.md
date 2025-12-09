@@ -1,522 +1,268 @@
-<div align="center">
+# 🔐 Quantum-Fiend SecureVault
 
-# 🔐 SecureVault CLI
+> A fully offline, military-grade encrypted password manager with a futuristic hacker-style CLI interface
 
-**A Fully Offline, Encrypted Command-Line Password Manager**
-
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blue?style=for-the-badge)](https://github.com/Quantum-Fiend/securevault-cli)
-[![Dart](https://img.shields.io/badge/Dart-3.0%2B-0175C2?style=for-the-badge&logo=dart)](https://dart.dev)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Encryption](https://img.shields.io/badge/Encryption-AES--256--GCM-red?style=for-the-badge)](https://github.com/Quantum-Fiend/securevault-cli)
-
-*Your passwords, encrypted and offline. Always.*
-
-[Features](#-features) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Commands](#-commands) • [Security](#-security)
-
-</div>
-
----
-
-## 🎯 What is SecureVault?
-
-SecureVault is a **desktop-based, terminal password manager** written in pure Dart. It runs entirely on your local machine with **zero network access**, using military-grade encryption to protect your credentials.
-
-### Why SecureVault?
-
-- 🔒 **Military-Grade Encryption**: AES-256-GCM with PBKDF2 key derivation
-- 📴 **100% Offline**: No cloud, no sync, no network access
-- 💻 **Cross-Platform**: Works on Windows, macOS, and Linux
-- 🎨 **Beautiful CLI**: Colored output, tables, and interactive prompts
-- 🔐 **Security First**: HMAC integrity, password rotation, breach detection
-- 🚀 **Fast & Lightweight**: Native compiled executable
-
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Platform: Windows](https://img.shields.io/badge/Platform-Windows-0078D6.svg)](https://www.microsoft.com/windows)
+[![Dart](https://img.shields.io/badge/Dart-3.0+-00B4AB.svg)](https://dart.dev)
+[![Encryption: AES-256-GCM](https://img.shields.io/badge/Encryption-AES--256--GCM-red.svg)](https://en.wikipedia.org/wiki/Galois/Counter_Mode)
 
 ## ✨ Features
 
-<table>
-<tr>
-<td width="50%">
+- 🔒 **Military-Grade Encryption** - AES-256-GCM with PBKDF2 key derivation
+- 🌐 **100% Offline** - No internet connection required, ever
+- 🎨 **Futuristic UI** - Cyberpunk-themed interactive terminal interface
+- ⌨️ **Multiple Navigation** - Arrow keys, W/S keys, or number selection
+- 📋 **Auto-Clipboard** - Passwords automatically copied with 30-second auto-clear
+- 🎲 **Password Generator** - Cryptographically secure random passwords
+- 🔍 **Password Analyzer** - Strength analysis and breach database checking
+- 🗂️ **Multi-Vault Support** - Manage multiple encrypted vaults
+- 🗑️ **Safe Deletion** - Double-confirmation vault deletion
+- 💾 **Zero Dependencies** - Standalone executable, no installation required
 
-### 🔐 Security Features
-- **AES-256-GCM** authenticated encryption
-- **PBKDF2-HMAC-SHA256** (100,000+ iterations)
-- **HMAC** integrity verification
-- **Clipboard auto-clear** (30 seconds)
-- **Password rotation tracking**
-- **Breach detection** (common passwords)
-- **Recovery key generation**
-- **Encrypted activity logs**
+## 📸 Screenshots
 
-</td>
-<td width="50%">
+### Main Menu
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║        QUANTUM-FIEND • SECURE VAULT INTERFACE                    ║
+║                                                                  ║
+╠══════════════════════════════════════════════════════════════════╣
+║ ▶ [01] 🔐 Create New Vault      Initialize a new encrypted vault║
+║   [02] 🔓 Unlock Vault           Access an existing vault        ║
+║   [03] 📝 Manage Passwords       Add, view, or modify entries   ║
+║   [04] 🎲 Generate Password      Create a secure random password║
+║   [05] 🔍 Analyze Password       Check password strength         ║
+║   [06] ℹ️  Vault Information     View vault metadata and stats  ║
+║   [07] 🗑️  Delete Vault          Permanently delete a vault file║
+║   [08] 🚪 Exit                   Close Quantum-Fiend interface  ║
+╠══════════════════════════════════════════════════════════════════╣
+║  ◆ Navigate: ↑/↓ or W/S or 1-8  •  Enter confirm  •  Q quit     ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
-### 💻 CLI Features
-- **14 powerful commands**
-- **Interactive prompts**
-- **Password masking**
-- **Colored output**
-- **ASCII tables**
-- **Search & filter**
-- **Tags & organization**
-- **Export/import vaults**
-
-</td>
-</tr>
-</table>
-
----
-
-## 🚀 Installation
+## 🚀 Quick Start
 
 ### Prerequisites
+- Windows 10/11
+- Administrator access (one-time installation only)
 
-- **Dart SDK 3.0+**: [Download here](https://dart.dev/get-dart)
+### Installation
 
-### Option 1: Run from Source
+1. **Download** the latest release
+2. **Extract** the archive to your preferred location
+3. **Run installer** as administrator:
+   ```powershell
+   Right-click install.bat → "Run as administrator"
+   ```
+4. **Launch** from any terminal:
+   ```powershell
+   Quantum-Fiend
+   ```
 
-```bash
-# Clone the repository
-git clone https://github.com/Quantum-Fiend/securevault-cli.git
-cd securevault-cli
+### First-Time Setup
 
-# Install dependencies
-dart pub get
+1. **Create your first vault:**
+   ```
+   Quantum-Fiend
+   → Press 1 (Create New Vault)
+   → Enter vault name: my_passwords
+   → Enter master password: ********
+   ```
 
-# Run the application
-dart run bin/main.dart
+2. **Add your first password:**
+   ```
+   → Press 2 (Unlock Vault)
+   → Enter master password: ********
+   → Press 3 (Manage Passwords)
+   → Press 1 (Add New Password)
+   → Service: Gmail
+   → Username: yourname@gmail.com
+   → Password: (or press Enter to generate)
+   ```
+
+3. **View your password:**
+   ```
+   → Press 3 (Manage Passwords)
+   → Press 2 (View Password)
+   → Type: Gmail
+   → Password displayed + auto-copied to clipboard!
+   ```
+
+## 📖 Usage Guide
+
+### Creating a Vault
+
+A vault is an encrypted container for your passwords. You can have multiple vaults for different purposes (personal, work, etc.).
+
+```powershell
+Quantum-Fiend
+→ [01] Create New Vault
+→ Enter vault name: work_passwords
+→ Enter master password: (choose a strong password)
+→ Confirm master password: (re-enter)
 ```
 
-### Option 2: Build Native Executable
+**Important:** Your master password cannot be recovered if lost!
 
-```bash
-# Build for your platform
-dart compile exe bin/main.dart -o vault
+### Managing Passwords
 
-# Move to PATH (macOS/Linux)
-sudo mv vault /usr/local/bin/
+Once your vault is unlocked, you can:
 
-# Move to PATH (Windows - PowerShell as Admin)
-Move-Item vault.exe C:\Windows\System32\
+- **Add Password** - Store a new service credential
+- **View Password** - Display and copy a password
+- **List All** - See all stored services
+- **Search** - Find passwords by service name
+- **Update** - Modify existing entries
+- **Delete** - Remove entries
+
+### Password Generation
+
+Generate cryptographically secure passwords:
+
+```powershell
+→ [04] Generate Password
+→ Length: 20
+→ Include uppercase? Y
+→ Include numbers? Y
+→ Include symbols? Y
+→ Generated: Zq8#mK2$pL9@nR4%vT6!
+→ Auto-copied to clipboard!
 ```
 
-Now you can use `vault` from anywhere in your terminal!
+### Security Features
 
----
+- **AES-256-GCM** encryption
+- **PBKDF2** key derivation (100,000 iterations)
+- **HMAC** authentication
+- **Zero-knowledge** architecture (passwords never leave your device)
+- **Auto-clear** clipboard after 30 seconds
+- **Breach detection** against known password databases
 
-## ⚡ Quick Start
+## 🔧 Advanced Usage
 
-### 1. Create Your First Vault
+### Multiple Vaults
 
-```bash
-vault create
-```
-
-<details>
-<summary>📸 See example output</summary>
-
-```
-╔═══════════════════════════════════════════════════════════╗
-║                                                           ║
-║   🔐  SecureVault - Encrypted Password Manager           ║
-║                                                           ║
-║   Fully Offline • AES-256-GCM • PBKDF2 • HMAC            ║
-║                                                           ║
-╚═══════════════════════════════════════════════════════════╝
-
-═══════════════════════════════════════════════════════════
- Create New Vault
-═══════════════════════════════════════════════════════════
-
-Vault name [My Vault]: Personal Passwords
-Master password: ****************
-Confirm password: ****************
-Password Strength: STRONG (78.5 bits)
-Generate recovery key? (Y/n): y
-Vault file path [./vault.svault]: 
-
-✓ Vault created successfully!
-ℹ Location: ./vault.svault
-
-⚠ IMPORTANT: Save your recovery key in a safe place!
-Recovery Key: xK9mP2vL8nQ4rT6wY3zA5bC7dE1fG0hJ
-```
-
-</details>
-
-### 2. Add a Password
-
-```bash
-vault add
-```
-
-<details>
-<summary>📸 See example output</summary>
+You can create separate vaults for different purposes:
 
 ```
-═══════════════════════════════════════════════════════════
- Add Password Entry
-═══════════════════════════════════════════════════════════
-
-Service/Website: GitHub
-Username/Email: user@example.com
-Generate password? (Y/n): y
-Password length [20]: 24
-Generated password: X9$mK#pL2@vN8qR!tY4wZ6aB
-Notes (optional): Personal GitHub account
-Tags (comma-separated, optional): work, development
-
-✓ Password entry added successfully!
+personal.svault     → Personal accounts
+work.svault         → Work credentials
+banking.svault      → Financial services
 ```
 
-</details>
+When unlocking, Quantum-Fiend will show all available vaults in the current directory.
 
-### 3. Retrieve a Password
+### Vault Selection
 
-```bash
-vault get github
+If multiple `.svault` files exist:
+1. Quantum-Fiend auto-detects them
+2. Shows interactive selection menu
+3. Displays vault name and file size
+4. Navigate with arrow keys
+
+### Deleting Vaults
+
+**⚠️ Warning:** This action is permanent!
+
+```powershell
+→ [07] Delete Vault
+→ Select vault to delete
+→ Confirm deletion (asked twice)
+→ Vault permanently deleted
 ```
 
-<details>
-<summary>📸 See example output</summary>
+## 🛡️ Security Best Practices
 
-```
-═══════════════════════════════════════════════════════════
- GitHub
-═══════════════════════════════════════════════════════════
+1. **Master Password**
+   - Use a unique, strong password (16+ characters)
+   - Include uppercase, lowercase, numbers, symbols
+   - Never reuse passwords
 
-Username: user@example.com
-Password: X9$mK#pL2@vN8qR!tY4wZ6aB
-Notes: Personal GitHub account
-Tags: work, development
+2. **Vault Storage**
+   - Keep `.svault` files in a secure location
+   - Consider backing up to encrypted external drive
+   - Never store in cloud without additional encryption
 
-Created: 2025-12-09 18:30:00
-Modified: 2025-12-09 18:30:00
-Password age: 0 days
+3. **Regular Maintenance**
+   - Update weak passwords regularly
+   - Remove unused entries
+   - Check password strength periodically
 
-Copy password to clipboard? (Y/n): y
-✓ Password copied! Will auto-clear in 30 seconds.
-```
+## 📋 Navigation Controls
 
-</details>
+### Keyboard Shortcuts
 
----
+| Key | Action |
+|-----|--------|
+| `↑` / `↓` | Navigate menu up/down |
+| `W` / `S` | Alternative navigation |
+| `1-8` | Direct menu selection |
+| `Enter` | Confirm selection |
+| `Q` | Quit/Back |
 
-## 📋 Commands
+## 🔄 Uninstallation
 
-<table>
-<tr>
-<th>Command</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-<tr>
-<td><code>vault create</code></td>
-<td>Create a new vault</td>
-<td><code>vault create</code></td>
-</tr>
-<tr>
-<td><code>vault unlock &lt;file&gt;</code></td>
-<td>Unlock existing vault</td>
-<td><code>vault unlock vault.svault</code></td>
-</tr>
-<tr>
-<td><code>vault lock</code></td>
-<td>Lock current vault</td>
-<td><code>vault lock</code></td>
-</tr>
-<tr>
-<td><code>vault add</code></td>
-<td>Add password entry</td>
-<td><code>vault add</code></td>
-</tr>
-<tr>
-<td><code>vault get &lt;service&gt;</code></td>
-<td>Get password entry</td>
-<td><code>vault get github</code></td>
-</tr>
-<tr>
-<td><code>vault list</code></td>
-<td>List all entries</td>
-<td><code>vault list</code></td>
-</tr>
-<tr>
-<td><code>vault search &lt;query&gt;</code></td>
-<td>Search entries</td>
-<td><code>vault search work</code></td>
-</tr>
-<tr>
-<td><code>vault generate [length]</code></td>
-<td>Generate secure password</td>
-<td><code>vault generate 24</code></td>
-</tr>
-<tr>
-<td><code>vault analyze [password]</code></td>
-<td>Analyze password strength</td>
-<td><code>vault analyze</code></td>
-</tr>
-<tr>
-<td><code>vault export &lt;file&gt;</code></td>
-<td>Export vault</td>
-<td><code>vault export backup.svault</code></td>
-</tr>
-<tr>
-<td><code>vault import &lt;src&gt; &lt;dst&gt;</code></td>
-<td>Import vault</td>
-<td><code>vault import backup.svault vault.svault</code></td>
-</tr>
-<tr>
-<td><code>vault info</code></td>
-<td>Show vault information</td>
-<td><code>vault info</code></td>
-</tr>
-<tr>
-<td><code>vault log</code></td>
-<td>Show activity log</td>
-<td><code>vault log</code></td>
-</tr>
-</table>
-
----
-
-## 🔐 Security
-
-### Encryption Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                   Master Password                       │
-└────────────────────┬────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────┐
-│          PBKDF2-HMAC-SHA256 (100,000 iterations)        │
-│                  + Random Salt (16 bytes)               │
-└────────────────────┬────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────┐
-│              256-bit Encryption Key                     │
-└────────────────────┬────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────┐
-│           AES-256-GCM Authenticated Encryption          │
-│                  + Random IV (12 bytes)                 │
-│                  + Auth Tag (16 bytes)                  │
-└────────────────────┬────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────┐
-│              HMAC-SHA256 Signature                      │
-│              (Tamper Detection)                         │
-└────────────────────┬────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────┐
-│            Binary .svault File Format                   │
-│         (Encrypted + Authenticated + Signed)            │
-└─────────────────────────────────────────────────────────┘
+```powershell
+Right-click uninstall.bat → "Run as administrator"
 ```
 
-### Vault File Format
+This removes `Quantum-Fiend.exe` from system PATH.
+
+## 🏗️ Technical Details
+
+### Architecture
 
 ```
-[Magic: SVLT] [Version] [Iterations] [Salt] [IV] [HMAC] [Encrypted Data] [Timestamp]
-    4 bytes     4 bytes    4 bytes    16B   12B   32B      variable         8 bytes
+Quantum-Fiend
+├── Encryption Layer (AES-256-GCM)
+├── Key Derivation (PBKDF2)
+├── Vault Manager
+├── Password Generator
+├── Clipboard Manager
+└── Interactive UI
 ```
 
-### Security Guarantees
+### Dependencies
 
-✅ **What SecureVault Protects Against**:
-- ✓ Unauthorized access without master password
-- ✓ Data tampering (HMAC verification)
-- ✓ Brute force attacks (100,000+ PBKDF2 iterations)
-- ✓ Clipboard snooping (30-second auto-clear)
-- ✓ Password reuse (breach detection)
-- ✓ Weak passwords (strength analyzer)
+- **crypto** - SHA-256, HMAC, PBKDF2
+- **pointycastle** - AES-GCM encryption
+- **path** - Cross-platform paths
+- **tint** - Terminal colors
 
-⚠️ **What SecureVault Cannot Protect Against**:
-- ✗ Keyloggers or malware on your device
-- ✗ Physical access to unlocked vault
-- ✗ Master password disclosure
-- ✗ Quantum computing attacks (future threat)
+### File Format
 
----
-
-## 🛠️ Development
-
-### Project Structure
-
-```
-securevault-cli/
-├── bin/
-│   └── main.dart                    # CLI entry point
-├── lib/
-│   ├── crypto/
-│   │   └── crypto_service.dart      # AES-GCM, PBKDF2, HMAC
-│   ├── models/
-│   │   └── vault_models.dart        # Data models
-│   ├── vault/
-│   │   ├── vault_file_manager.dart  # Binary file I/O
-│   │   └── vault_manager.dart       # Vault operations
-│   └── utils/
-│       ├── terminal_ui.dart         # CLI UI utilities
-│       └── clipboard.dart           # Clipboard management
-├── test/                            # Unit tests
-├── pubspec.yaml                     # Dependencies
-└── README.md                        # This file
-```
-
-### Running Tests
-
-```bash
-dart test
-```
-
-### Code Quality
-
-```bash
-# Analyze code
-dart analyze
-
-# Format code
-dart format .
-
-# Check for issues
-dart fix --dry-run
-```
-
----
-
-## 🐛 Troubleshooting
-
-<details>
-<summary><b>Clipboard not working on Linux</b></summary>
-
-Install clipboard utilities:
-
-```bash
-# Ubuntu/Debian
-sudo apt-get install xclip
-
-# or
-sudo apt-get install xsel
-
-# Fedora
-sudo dnf install xclip
-```
-
-</details>
-
-<details>
-<summary><b>Permission denied on macOS/Linux</b></summary>
-
-Make the executable file executable:
-
-```bash
-chmod +x vault
-```
-
-</details>
-
-<details>
-<summary><b>Dart not found</b></summary>
-
-Install Dart SDK:
-
-```bash
-# macOS (Homebrew)
-brew tap dart-lang/dart
-brew install dart
-
-# Windows (Chocolatey)
-choco install dart-sdk
-
-# Linux (apt)
-sudo apt-get update
-sudo apt-get install apt-transport-https
-wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
-echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
-sudo apt-get update
-sudo apt-get install dart
-```
-
-</details>
-
----
-
-## 📊 Comparison
-
-| Feature | SecureVault CLI | 1Password | LastPass | Bitwarden |
-|---------|----------------|-----------|----------|-----------|
-| **Offline** | ✅ 100% | ❌ Cloud | ❌ Cloud | ❌ Cloud |
-| **Open Source** | ✅ Yes | ❌ No | ❌ No | ✅ Yes |
-| **CLI** | ✅ Native | ⚠️ Limited | ❌ No | ⚠️ Limited |
-| **Encryption** | AES-256-GCM | AES-256 | AES-256 | AES-256 |
-| **Cost** | ✅ Free | 💰 Paid | 💰 Freemium | 💰 Freemium |
-| **Network** | ❌ Never | ✅ Required | ✅ Required | ✅ Required |
-| **Self-Hosted** | ✅ Always | ❌ No | ❌ No | ⚠️ Optional |
-
----
+Vaults are stored as `.svault` files:
+- Binary encrypted format
+- Metadata header
+- Encrypted password entries
+- HMAC authentication tag
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow Dart style guide
-- Add tests for new features
-- Update documentation
-- Keep commits atomic and descriptive
-
----
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ⚠️ Disclaimer
 
-SecureVault is provided "as is" without warranty of any kind. While we implement industry-standard cryptography, we cannot guarantee absolute security. Always maintain backups of important data.
-
-**Use at your own risk.**
-
----
+This software is provided "as is" without warranty. Always maintain backups of your password vaults. The developers are not responsible for lost passwords or data.
 
 ## 🙏 Acknowledgments
 
-- **Dart Team** - For the excellent language and ecosystem
-- **PointyCastle** - For cryptography implementations
-- **Open Source Community** - For inspiration and support
-
----
-
-## 📞 Support
-
-- 📧 **Email**: tusharbisht706@gmail.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Quantum-Fiend/securevault-cli/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/Quantum-Fiend/securevault-cli/discussions)
+- Built with [Dart](https://dart.dev)
+- Encryption powered by [PointyCastle](https://pub.dev/packages/pointycastle)
+- Terminal UI with [Tint](https://pub.dev/packages/tint)
 
 ---
 
 <div align="center">
 
-**⭐ Star this repo if you find it useful! ⭐**
+**[⬆ Back to Top](#-quantum-fiend-securevault)**
 
-Made with ❤️ and 🔐 by [Quantum-Fiend](https://github.com/Quantum-Fiend)
-
-**Remember**: Your master password is the key to everything. Choose wisely, store securely, never share.
-
-🔐 **Stay Secure!**
+Made with 🔐 by [Your Name](https://github.com/yourusername)
 
 </div>

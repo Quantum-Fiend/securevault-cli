@@ -77,15 +77,36 @@ class TerminalUI {
   /// Read password (masked input)
   static String readPassword(String prompt) {
     stdout.write('$prompt: ');
-    stdin.echoMode = false;
+    try {
+      stdin.echoMode = false;
+      stdin.lineMode = true;
+    } catch (e) {
+      // Ignore if not supported
+    }
+    
     final password = stdin.readLineSync() ?? '';
-    stdin.echoMode = true;
+    
+    try {
+      stdin.echoMode = true;
+      stdin.lineMode = true;
+    } catch (e) {
+      // Ignore if not supported
+    }
+    
     print('');
     return password;
   }
 
   /// Read input
   static String readInput(String prompt, {String? defaultValue}) {
+    // Ensure echo mode is on for visible typing
+    try {
+      stdin.echoMode = true;
+      stdin.lineMode = true;
+    } catch (e) {
+      // Ignore if not supported
+    }
+    
     if (defaultValue != null) {
       stdout.write('$prompt [$defaultValue]: ');
     } else {
@@ -134,7 +155,7 @@ class TerminalUI {
 ║                                                           ║
 ║   🔐  SecureVault - Encrypted Password Manager           ║
 ║                                                           ║
-║   Fully Offline • AES-256-GCM • PBKDF2 • HMAC            ║
+║   Fully Offline • AES-256-GCM • PBKDF2 • HMAC             ║
 ║                                                           ║
 ╚═══════════════════════════════════════════════════════════╝
 '''.cyan());
