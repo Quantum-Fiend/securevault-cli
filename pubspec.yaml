@@ -1,0 +1,33 @@
+name: securevault
+description: A fully offline, encrypted CLI password manager for desktop
+version: 1.0.0
+repository: https://github.com/yourusername/securevault
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  # Cryptography
+  crypto: ^3.0.3              # SHA-256, HMAC, PBKDF2
+  pointycastle: ^3.7.3        # AES-GCM, Argon2
+  
+  # CLI & Terminal
+  args: ^2.4.2                # Command-line argument parsing
+  io: ^1.0.4                  # File I/O utilities
+  path: ^1.8.3                # Cross-platform path handling
+  
+  # Terminal UI
+  cli_util: ^0.4.0            # CLI utilities
+  interact: ^2.2.0            # Interactive prompts
+  tint: ^2.0.1                # Colored terminal output
+  
+  # Utilities
+  intl: ^0.18.1               # Date/time formatting
+  uuid: ^4.0.0                # UUID generation
+
+dev_dependencies:
+  lints: ^2.1.1               # Dart linting
+  test: ^1.24.0               # Unit testing
+
+executables:
+  vault: main

@@ -1,0 +1,31 @@
+# Dart
+.dart_tool/
+.packages
+build/
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Compiled
+*.exe
+*.dll
+*.so
+*.dylib
+vault
+vault.exe
+
+# Vault files
+*.svault
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+coverage/
+.test_coverage/
